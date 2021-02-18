@@ -9,7 +9,7 @@
 
 struct Data
 {
-    std::vector<std::complex<double>> x, y, z; // input data
+    std::vector<std::complex<float>> x, y, z; // input data
     int dataCount;
     int n;
     float sampleRate;
@@ -70,7 +70,7 @@ int ReadFile(std::string filename, Data &dataOut)
             lineCount++; // incrementa contagem de linhas
 
             std::stringstream ss(line); // transforma linha em stream para extrair os dados
-            double i;
+            float i;
 
             ss >> i; // extrai primeiro numero (x)
             dataOut.x.push_back(i);
